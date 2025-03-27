@@ -149,5 +149,4 @@ else
 fi
 
 # create workspace directory
-cd $HOME
-mkdir -p workspace/github.com/stevenkelso/
+mkdir $HOME/git
