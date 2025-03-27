@@ -149,4 +149,4 @@ else
 fi
 
 # create workspace directory
-mkdir $HOME/git
+mkdir -p $HOME/.local/src/git
