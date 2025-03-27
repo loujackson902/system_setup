@@ -141,7 +141,7 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
     echo -e "\nContinuing..."
     cd $HOME
     rm $HOME/.bashrc
-    git clone https://github.com/StevenKelso/dotfiles
+    git clone https://github.com/loujackson902/dotfiles.git
     cd dotfiles
     stow .
 else
