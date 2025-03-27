@@ -1,0 +1,30 @@
+#+TITLE: system_setup.sh
+#+AUTHOR: Steven Kelso & Lou Jackson
+#+DESCRIPTION: System setup script.
+
+* About
+A script to be used after a fresh install to install and set up programs which I consider essential to my workflow, regardless of distro or package manager.
+
+Any programs which are unable to be installed, will be logged and listed to the user for manual installation.
+
+* Usage
+
+- Clone the repo
+#+begin_src bash
+git clone https://github.com/loujackson902/system_setup.git
+#+end_src
+
+- cd into the directory
+#+begin_src bash
+cd system_setup
+#+end_src
+
+- Make the script executable
+#+begin_src bash
+chmod +x system_setup.sh
+#+end_src
+
+- Run the script
+#+begin_src bash
+./system_setup.sh
+#+end_src
