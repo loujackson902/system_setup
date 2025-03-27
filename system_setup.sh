@@ -1,4 +1,21 @@
-#!/bin/bash
+#!/bin/env bash
+
+# list of deb packages
+deb_apps=(
+"cmake"
+"emacs"
+"git"
+"fd-find"
+"fzf"
+"keepassxc"
+"lf"
+"make"
+"neovim"
+"ripgrep"
+"stow"
+"vim"
+"zsh"
+)
 
 # list of arch packages
 arch_apps=(
@@ -39,10 +56,22 @@ void_apps=(
 failed=()
 
 # determine package manager
-read -rp "What is your package manager? (pacman/zypper/xbps) " pm
+read -rp "What is your package manager? (apt/pacman/xbps/zypper/) " pm
 
 # update repo and install packages
 case "$pm" in
+
+    "apt")
+        sudo apt update --yes && sudo apt upgrade --yes && sudo apt autoremove --yes
+        for i in "${deb_apps[@]}"; do
+            echo -e "\nAttempting to install $i ..."
+            sudo apt install $i --yes
+            if [ $? -ne 0 ]; then
+                failed=("${failed[@]}" "$i")
+            fi
+        done
+        ;;
+
     "pacman")
         sudo pacman -Syu
         for i in "${arch_apps[@]}"; do

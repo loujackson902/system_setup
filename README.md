@@ -1,3 +1,6 @@
+#+TITLE: system_setup.sh
+#+AUTHOR: Steven Kelso & Lou Jackson
+#+DESCRIPTION: System setup script.
 # system_setup.sh
 
 ## About
@@ -9,7 +12,7 @@ Any programs which are unable to be installed, will be logged and listed to the 
 
 - Clone the repo
 ```bash
-git clone https://github.com/StevenKelso/system_setup
+git clone https://github.com/loujackson902/system_setup.git
 ```
 
 - cd into the directory
